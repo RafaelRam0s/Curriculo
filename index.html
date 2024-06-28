@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Rafael Ramos da Silva" />
+    <meta name="description" content="Curriculo de Rafael Ramos como desenvolvedor" />
+    <meta name="keywords" content="Curriculo, desenvoledor, fullstack" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="license" href="/LICENSE" />
+    <link rel="icon" href="./assets/imagens/icones/icone_logo_r_16px.ico" type="image/x-icon" />
+    
+    <link rel="stylesheet" href="./assets/css/style.css" media="all" />
+    <link rel="stylesheet" href="./assets/css/layout_rancode.css" media="all" />
+    
+    <title>Currículo de Desenvolvedor - Rafael Ramos</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <div id="pre_cabecalho"></div>
+    <div id="corpo">
+        <header id="cabecalho">
+            <div id="cabecalho_principal">
+
+                <div>
+                    <a>
+                        <div class="logo_em_css"  onclick="gerarPDF()">
+                            Meu Curriculo
+                        </div>
+                    </a>
+                </div>
+
+                <div class="display_none display_block_600px">
+                    <span class="mensagem_menu">Espero fazer o melhor possível!</span>
+                </div>
+
+                <div id="_abrir_menu_links">
+                    <button type="button" onclick="expandirMenu()" title="Abrir menu">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+                <div id="_fechar_menu_links">
+                    <button type="button" onclick="recolherMenu()" title="Fechar menu">
+                        <i class="fa-solid fa-x"></i>
+                    </button>
+                </div> 
+
+            </div>
+
+            <nav id="_menu_links">
+                <div>
+                    <ul>
+                        <li>
+                            <a href="./index.html">Curriculo de Desenvolvedor - Rafael Ramos</a>
+                        </li>
+                        <!--
+                            <li class="aba_de_categorias">
+                                <span>Aba de categorias 1</span>
+                                <ul>
+                                    <li>
+                                        <a href="#">Site 3</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Site 4</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Site 5</a>
+                            </li> 
+                        -->
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        
+        <main>
+            <style>
+                .img_perfil {
+                    width: 300px;
+                    display: block;
+                    float: left;
+                    padding: 10px;
+                    margin-right: 30px;
+                    box-shadow: 0px 0px 4px black;
+                }
+                
+                .img_perfil img {
+                    width: 250px;
+                    height: 250px;
+                    border-radius: 100%;
+                    display: block;
+                    margin: auto;
+                }
+            
+                .lista_de_sistemas {
+                    padding: 0px;
+                }
+                .lista_de_sistemas li {
+                    background-color: var(--cor_a1);
+                    display: inline-block;
+                    color: var(--cor_z2);
+                    padding: 2px 5px 2px 5px;
+                    border-radius: 10px;
+                    margin-bottom: 5px;
+                    cursor: pointer;
+                }
+                .lista_de_sistemas li:hover {
+                    color: var(--cor_a1);
+                    background-color: var(--cor_z2);
+                    box-sizing: border-box;
+                    border: 1px solid black;
+                }
+                
+                .observacao_de_agradecimento {
+                    font-size: 12px;
+                    font-weight: 800;
+                    text-align: center;
+                }
+            
+                .icone_arduino {
+                    position: relative;
+                }
+                .icone_arduino .icone_arduino_sinais {
+                    position: absolute;
+                    left: 7px;
+                    top: 9px;
+                    width: 50px;
+                    zoom: 0.39;
+                }
+                .icone_arduino .fa-infinity {
+                    zoom: 1.2;
+                }
+                .icone_arduino .icone_arduino_sinais .fa-minus, .icone_arduino .icone_arduino_sinais .fa-plus {
+                    margin-right: 7px;
+                }
+                @media all and (max-width: 600px) {
+                    .img_perfil {
+                        width: auto;
+                        margin: auto;
+                    }
+                }
+            </style>
+            
+            <div>
+                <h2 style="text-align: center; font-weight: 400;">Rafael Ramos da Silva</h2>
+                <h1 style="text-align: center; text-decoration: underline;">Desenvolvedor e Programador de Softwares</h1>
+            
+                <section>
+                    <h3 style="text-align: center;">Meu Perfil:</h3>
+            
+                    <div>
+            
+                        <div class="img_perfil">
+                            <img src="./assets/imagens/rafael_ramos_18.webp" alt="Foto do Rafael Ramos" width="960" height="960" />
+            
+                            <div>
+                                <h4>Linguagens e Tecnologias estudadas:</h4>
+            
+                                <ul class="lista_de_sistemas">
+                                    <a style="color: unset;" href="/templates/template_html"><li><i class="fa-brands fa-html5"></i> HTML5</li></a>
+                                    <li><i class="fa-brands fa-css3-alt"></i> CSS3</li>
+                                    <li><i class="fa-brands fa-js"></i> Javascript</li>
+                                    <li><i class="fa-brands fa-php"></i> PHP</li>
+                                    <li><i class="fa-solid fa-database"></i> MySQL</li>
+                                    <li><i class="fa-brands fa-github"></i> Github</li>
+                                    <li><i class="fa-brands fa-java"></i> Java</li>
+                                    <li><i class="fa-brands fa-python"></i> Python</li>
+                                    <li><i class="fa-brands fa-node"></i> NodeJS</li>
+                                    <li>C</li>
+                                    <li>C#</li>
+                                    <li>Asp.Net MVC</li>
+                                    <li>Arduino</li>
+                                    <li>Mips-32</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <div>
+                                <h4>O que faço atualmente:</h4>
+
+                                <p>Estudo no Paraná na UTFPR campus Ponta Grossa em Análise e Desenvolvimento de Sistemas e busco poder contribuir no meio empresarial colocando meus conhecimentos e habilidades em prática, não só como desenvolvedor de softwares, mas também em funções que desempenham hablidades parecidas como analista de dados, gerencia e muitas outras.</p>
+                            </div>
+            
+                            <div>
+                                <h4>Experiência profissional:</h4>
+            
+                                <p>Atuei 2 anos como Desenvolvedor FullStack, realizando o design do site, sua implementação com o padrão MVC, otimização do site para rankeamento, conexões com APIs externas e internas, desenvolvimento de Banco de dados, atendimento ao cliente para soluções rápidas, tester da aplicação, analista de dados, segurança de dados com criptografia, formulação de formulários, validações de login e manutenção diária.</p>
+                            </div>
+
+                            <div>
+                                <h5>Idiomas:</h5> 
+                                <span>Português fluente</span>
+                                <br>
+                                <span>Inglês técnico</span>
+                            </div>
+                            
+                            <div>
+                                <h5 style="display: inline-block;">Nascimento:</h5> 
+                                <span>13/07/2002</span>
+                            </div>
+
+                            <div>
+                                <h5 style="display: inline-block;">Pretensão salarial:</h5> 
+                                <span>Negociável de acordo com a função</span>
+                            </div>
+
+                            <div>
+                                <h4>Outros pontos sobre mim:</h4>
+                                
+                                <p>Sou um profissional com bom trabalho de equipe e comunicação. Possuo capacidade de resolver problemas de forma criativa e analítica, possuo adaptabilidade em ambientes dinâmicos. Sou conhecido pela minha empatia e habilidade em negociar acordos benéficos. Estou constantemente buscando aprender e melhorar minhas habilidades na área.</p>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+                    
+                </section>
+            </div>
+        </main>
+        
+        <hr />
+
+        <footer id="rodape">
+            <div>
+                <div id="area_informacoes" class="flex-direction_column_600px">
+                    <div class="width_100p_600px">
+                        <a href="/">
+                            <div class="logo_em_css">
+                                Meu Currículo
+                            </div>
+                        </a>
+                        <p>Qualquer dúvida ou sugestão entre em contato, agradeço pela atenção!</p>
+                    </div>
+                    <div class="width_100p_600px">
+                        <address>
+                            <p>Criado por: Rafael Ramos da Silva</p>
+                            <p>
+                                <i class="fa-brands fa-github"></i> 
+                                Github: <a href="https://github.com/RafaelRam0s" target="_blank" rel="nofollow">RafaelRam0s</a>
+                            </p>
+                            <p>
+                                <i class="fa-brands fa-instagram"></i>
+                                Instragram: <a href="https://www.instagram.com/rafael6ramos/" target="_blank" rel="nofollow">rafael6ramos</a>
+                            </p>
+                            <p>
+                                <i class="fa-brands fa-linkedin-in"></i>
+                                Linkedin: <a href="https://www.linkedin.com/in/rafael-ramos-3a330019b/" target="_blank" rel="nofollow">Rafael Ramos</a>
+                            </p>
+                            <p>
+                                <i class="fa-solid fa-envelope"></i>
+                                E-mail: <a href="mailto:rafael6ramos@gmail.com" target="_blank" rel="nofollow">rafael6ramos@gmail.com</a>
+                            </p>
+                            <p>
+                                <i class="fas fa-mobile-alt"></i>
+                                Celular de contato: <a href="tel:+5511950503563">+55 (11) 9-5050-3563</a>
+                            </p>
+                        </address>
+                    </div>
+                </div>
+                
+                <div id="area_copyright">
+                    <hr />
+                    
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function expandirMenu() { 
+            document.getElementById('_menu_links').style.display = 'block';
+            setTimeout(() => {document.getElementById('_menu_links').style.maxHeight = '40vh';}, 100);
+
+            document.getElementById('_abrir_menu_links').style.display = 'none';
+            document.getElementById('_fechar_menu_links').style.display = 'block';
+        };
+
+        function recolherMenu() {
+            document.getElementById('_menu_links').style.maxHeight = '0vh';
+            setTimeout(() => {document.getElementById('_menu_links').style.display = 'none';}, 100);
+
+            document.getElementById('_abrir_menu_links').style.display = 'block';
+            document.getElementById('_fechar_menu_links').style.display = 'none';
+        };
+        
+    </script>
+    
+    <script>
+        function gerarPDF() {
+            // Opções de configuração para o PDF
+            var opcoes = {
+                filename: 'documento.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+            };
+        
+            // Elemento da página que será convertido em PDF
+            var elemento = document.body;
+        
+            // Chamada para gerar o PDF
+            html2pdf()
+                .set(opcoes)
+                .from(elemento)
+                .save();
+        }
+    </script>
+</body>
+</html>
