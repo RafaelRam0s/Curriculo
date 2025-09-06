@@ -216,12 +216,56 @@
             border: 2px solid rgb(75, 0, 130);
             scale: 1.5;
         }
+        .curriculo .curriculo_padding {
+            padding: 0px 20px 20px 20px;
+        }
 
         @media print {
             .curriculo_download {
                 display: none;
             }
         }
+
+        @media all and (max-width: 1000px) {
+            .curriculo {
+                height: auto;
+            }
+                .curriculo .curriculo_contato {
+                    flex-direction: column;
+                    text-align: center;
+                }
+                    .curriculo .curriculo_contato > * {
+                        width: 100%;
+                    }
+                    .curriculo .curriculo_contato .curriculo_vaga_nome {
+                        align-self: auto;
+                    }
+                        .curriculo .curriculo_vaga_nome h2::before {
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
+                .curriculo .curriculo_detalhes {
+                    flex-direction: column;
+                    padding: 10px 10px 10px 10px;
+                }
+
+            .curriculo .curriculo_padding {
+                padding: 0px 10px 10px 10px;
+            }
+            .curriculo .curriculo_contatos {
+                width: 100%;
+            }
+                .curriculo .curriculo_contatos ul::before {
+                    display: none;
+                }
+                .curriculo .curriculo_contatos ul div {
+                    display: block;
+                }
+                .curriculo .curriculo_contatos ul div b {
+                    width: 100%;
+                }
+        }
+
     </style>
 </head>
 <body>
@@ -289,14 +333,14 @@
             </div>
         </div>
 
-        <div style="padding: 0px 20px 20px 20px;">
+        <div class="curriculo_padding">
             <div class="curriculo_detalhes">
                 <div class="curriculo_detalhes_container">
                     
                     <div class="curriculo_sobre_mim">
                         <h2><i class="fa-solid fa-user"></i> Sobre Mim</h2>
 
-                        <p>Sou um desenvolvedor fullstack apaixonado por tecnologia e pela entrega de soluções completas. Tenho perfil organizado, autodidata e comprometido com prazos, prezando sempre pela lógica, clareza e performance dos sistemas que desenvolvo.</p>
+                        <p>Sou um desenvolvedor fullstack apaixonado por tecnologia e pela entrega de soluções completas. Sou organizado, autodidata e comprometido com prazos, prezando sempre pela lógica, clareza e performance dos sistemas que desenvolvo.</p>
 
                         <p>Valorizo ambientes colaborativos, com boa comunicação, transparência e com foco no crescimento pessoal e profissional da equipe. Estou em constante evolução buscando cada vez mais conhecimentos nas tecnologias e na gestão de pessoas e projetos.</p>
                     </div>
