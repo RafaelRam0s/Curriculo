@@ -1,0 +1,234 @@
+@charset "UTF-8";
+
+
+
+
+
+/* Configurações gerais */
+* {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+body {
+    font-family: 'NotoSansMono', 'Courier New', Courier, monospace;
+    font-size: 16px;
+    font-weight: 400;
+
+    background-color: var(--cor_fundo);
+    color: var(--cor_texto);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'NotoSansMono - ExtraCondensed', 'Courier New', Courier, monospace;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 1.6em;
+}
+h2 {
+    font-size: 1.5em;
+}
+h3 {
+    font-size: 1.4em;
+}
+h4 {
+    font-size: 1.3em;
+}
+h5 {
+    font-size: 1.2em;
+}
+h6 {
+    font-size: 1.1em;
+}
+
+p {
+    font-size: 1em;
+}
+
+
+
+/* Layout */
+#layout_pagina {
+    position: relative;
+    z-index: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: normal;
+    align-content: stretch;
+    justify-content: space-between;
+}
+
+
+
+#layout_cabecalho {
+    background-color: rgba(50, 50, 50, 0.2);
+    backdrop-filter: blur(25px);
+    color: var(--cor_texto);
+    position: sticky;
+    z-index: 10;
+    top: 0px;
+    left: 0px;
+}
+    [data-theme="dark"] #layout_cabecalho {
+        background-color: rgba(200, 200, 200, 0.2);
+    }
+    #layout_cabecalho .layout_cabecalho_container {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #layout_cabecalho .layout_cabecalho_container > div {
+        max-width: fit-content;
+    }
+
+    #layout_cabecalho .layout_cabecalho_btn_menu {
+        display: none;
+    }
+
+
+
+#layout_conteudo {
+    flex-grow: 1;
+}
+
+
+
+#layout_rodape {
+    background-color: var(--cor_primaria);
+    color: var(--cor_fundo);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Classes */
+.display_none {
+    display: none !important;
+}
+
+.layout_espacamento {
+    display: block;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0px auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+.logo_desenvolvedor_extensa {
+    text-decoration: none;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: 2px;
+    align-items: center;
+    justify-content: center;
+    font-family: 'NotoSansMono', 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: 400;
+    max-width: fit-content;
+    padding: 4px 12px 10px 0px;
+}
+    .logo_desenvolvedor_extensa div {
+        max-width: fit-content;
+    }
+    .logo_desenvolvedor_extensa span {
+        word-break: keep-all;
+        white-space: nowrap;
+    }
+    .logo_desenvolvedor_extensa .logo_desenvolvedor_extensa_1 {
+        height: 30px;
+        line-height: 18px;
+    }
+        .logo_desenvolvedor_extensa .logo_desenvolvedor_extensa_1_1 {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            zoom: 2;
+        }
+    .logo_desenvolvedor_extensa .logo_desenvolvedor_extensa_2 {
+        padding: 0px 2px 0px 0px;
+        background-color: var(--cor_texto);
+        height: 25px;
+        margin: 5px 5px 0px 5px;
+        border-radius: 10px;
+    }
+    .logo_desenvolvedor_extensa .logo_desenvolvedor_extensa_3 {
+        line-height: 16px;
+    }
+        .logo_desenvolvedor_extensa .logo_desenvolvedor_extensa_3_1 {
+            text-transform: uppercase; 
+            font-size: 14px;
+        }
+        .logo_desenvolvedor_extensa .logo_desenvolvedor_extensa_3_2 {
+            text-transform: uppercase;
+            font-weight: 600;
+            font-family: 'NotoSansMono - ExtraCondensed', 'Courier New', Courier, monospace;
+            font-size: 16px;
+        }
+        .logo_desenvolvedor_extensa .logo_desenvolvedor_extensa_1_1_2,
+        .logo_desenvolvedor_extensa .logo_desenvolvedor_extensa_1_1_3 {
+            margin-left: -3px;
+        }
+
+
+/* Adaptação para outras telas */
+
+@media all and (max-width: 1400px) {
+    
+}
+
+@media all and (max-width: 1000px) {
+    #layout_cabecalho .layout_cabecalho_btn_menu {
+        display: block;
+    }
+}
+
+@media all and (max-width: 600px) {
+    body {
+        font-size: 11px;
+    }
+    
+    .logo_desenvolvedor_extensa {
+        zoom: 0.7;
+    }
+}
+
+
+
+
+
+
+/* Ajuste para prints */
+@media print {}
+
+
+
+
+

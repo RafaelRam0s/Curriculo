@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+:root {
+    --cor_primaria: rgb(4, 0, 96);
+    --cor_primaria_aux: rgb(6, 0, 160);
+
+    --cor_secundaria_1: rgb(0, 250, 254);
+    --cor_secundaria_1_aux: rgb(0, 250, 254);
+    --cor_secundaria_2: rgb(22, 12, 252);
+    --cor_secundaria_2_aux: rgb(0, 250, 254);
+    --cor_secundaria_3: rgb(144, 0, 184);
+    --cor_secundaria_3_aux: rgb(0, 250, 254);
+    --cor_secundaria_4: rgb(0, 184, 150);
+    --cor_secundaria_4_aux: rgb(0, 250, 254);
+
+    --cor_fundo: rgb(235, 235, 235);
+    --cor_fundo_aux: rgb(215, 215, 215);
+    --cor_texto: rgb(40, 40, 40);
+    --cor_texto_aux: rgb(20, 20, 20);
+
+    --cor_tema: rgb(255, 255, 255);
+    --cor_tema_transparente: rgba(255, 255, 255, 0.28);
+    --cor_contra_tema: rgb(0, 0, 0);
+    --cor_contra_tema_transparente: rgba(0, 0, 0, 0.28);
+
+    --cor_successo: rgb(0, 255, 0);
+    --cor_successo_fundo: rgb(0, 127, 0);
+    --cor_erro: rgb(255, 0, 0);
+    --cor_erro_fundo: rgb(127, 0, 0);
+}
+
+[data-theme="dark"] {
+    --cor_primaria: rgb(0, 250, 254);
+    --cor_primaria_aux: rgb(50, 50, 50);
+
+    --cor_secundaria_1: rgb(50, 50, 50);
+    --cor_secundaria_2: rgb(50, 50, 50);
+    --cor_secundaria_3: rgb(50, 50, 50);
+    --cor_secundaria_4: rgb(50, 50, 50);
+
+    --cor_fundo: rgb(50, 50, 50);
+    --cor_fundo_aux: rgb(25, 25, 25);
+    --cor_texto: rgb(225, 225, 225);
+    --cor_texto_aux: rgb(200, 200, 200);
+
+    --cor_tema: #000000;
+    --cor_tema_transparente: #00000044;
+    --cor_contra_tema: #ffffff;
+    --cor_contra_tema_transparente: #ffffff44;
+}
+
+a {
+    color: var(--cor_texto);
+    text-decoration: underline;
+}

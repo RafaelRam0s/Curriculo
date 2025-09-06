@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Hexagon R logo">
+  <title>Hexagon R logo</title>
+  <desc>White bordered hexagon with a white R in Noto Sans Mono on a deep blue background.</desc>
+  <defs>
+    <style>
+      @font-face {
+        font-family: "Noto Sans Mono";
+        font-style: normal;
+        font-weight: 400;
+        src: local("Noto Sans Mono"), local("NotoSansMono-Regular");
+      }
+      .bg { fill: rgb(6,0,160); }
+      .hex { fill: none; stroke: #ffffff; stroke-width: 24; stroke-linejoin: round; }
+      .letter { fill: #ffffff; font-family: "Noto Sans Mono", monospace; font-size: 260px; font-weight: 700; text-anchor: middle; dominant-baseline: middle; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect class="bg" x="0" y="0" width="512" height="512" rx="96" ry="96" />
+
+  <!-- Hexagon outline -->
+  <polygon class="hex" points="429.21,156.00 429.21,356.00 256.00,456.00 82.79,356.00 82.79,156.00 256.00,56.00" />
+
+  <!-- Centered R -->
+  <text class="letter" x="256" y="256">R</text>
+</svg>

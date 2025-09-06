@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculo</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            width: 100%;
+            height: auto;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        i {
+            width: fit-content;
+        }
+
+        a {
+            text-decoration: none;
+            color: default;
+        }
+        a:hover {
+            opacity: 0.5;
+        }
+
+        .curriculo {
+            background-image: 
+                linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('./assets/images/fundos/circuitos.avif')
+            ;
+            background-repeat: repeat;
+            color: rgb(255, 255, 255);
+            max-width: 1123px;
+            margin: 0px auto;
+            padding: 40px 1px;
+            height: 1588px;
+            
+        }
+        .curriculo .curriculo_contato {
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            gap: 10px;
+            align-items: center;
+            justify-content: space-between;
+            padding: 40px 0px 20px 0px;
+        }
+            .curriculo .curriculo_foto {
+                width: 20%;
+            }
+                .curriculo .curriculo_foto img {
+                    display: block;
+                    max-width: 200px;
+                    border-radius: 100%;
+                    margin: auto;
+                    box-shadow: 0px 0px 5px rgb(255, 255, 255);
+                }
+            .curriculo .curriculo_vaga_nome {
+                width: 35%;
+                align-self: flex-start;
+                margin-top: 25px;
+            }
+                .curriculo .curriculo_vaga_nome h1 {
+                    font-size: 2.5em;
+                    margin: 0px 0px 20px 0px;
+                    
+                }
+                .curriculo .curriculo_vaga_nome h2 {
+                    position: relative;
+                    margin-bottom: 15px;
+                    font-size: 2.2em;
+                    font-style: italic;
+                    /* color: rgb(0, 0, 0);
+                    text-shadow: 
+                        1px 0px 0px rgb(255, 255, 255),
+                        -1px 0px 0px rgb(255, 255, 255),
+                        0px 1px 0px rgb(255, 255, 255),
+                        0px -1px 0px rgb(255, 255, 255),
+
+                        1px 1px 0px rgb(255, 255, 255),
+                        1px -1px 0px rgb(255, 255, 255),
+                        -1px 1px 0px rgb(255, 255, 255),
+                        -1px -1px 0px rgb(255, 255, 255)
+                    ; */
+                }
+                .curriculo .curriculo_vaga_nome h2::before {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    max-width: 200px;
+                    height: 4px;
+                    background-color: rgb(255, 255, 255);
+                    bottom: -10px;
+                }
+            .curriculo .curriculo_contatos {
+                width: 45%;
+            }
+                .curriculo .curriculo_contatos a {
+                    color: rgb(194 194 194);;
+                }
+                .curriculo .curriculo_contatos ul {
+                    list-style-type: none;
+                    margin: 10px 0px 20px 0px;
+                    color: rgb(194 194 194);
+                    font-family: sans-serif;
+                    font-size: 0.8em;
+                    font-weight: 500;
+                    position: relative;
+                }
+                .curriculo .curriculo_contatos ul::before {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    max-width: 100px;
+                    height: 1px;
+                    background-color: rgb(255, 255, 255);
+                    bottom: -5px;
+                }
+                    .curriculo .curriculo_contatos ul li {
+                        margin: 5px 0px;
+                    }
+                    .curriculo .curriculo_contatos ul div {
+                        display: flex;
+                        flex-wrap: nowrap;
+                        flex-direction: row;
+                        gap: 10px;
+                        align-items: center;
+                    }
+                        .curriculo .curriculo_contatos ul div b {
+                            font-size: 1.2em;
+                            width: 50%;
+                        }
+                        .curriculo .curriculo_contatos ul div span {
+                            font-size: 1.1em;
+                        }
+
+        .curriculo .curriculo_detalhes {
+            background-color: rgb(255, 255, 255);
+            border-radius: 32px 32px 16px 16px;
+            padding: 20px 40px 20px 40px;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            gap: 30px;
+            justify-content: space-between;
+            align-items: flex-start;
+
+        }
+            .curriculo .curriculo_detalhes ul {
+                list-style: none;
+            }
+            .curriculo .curriculo_detalhes .curriculo_detalhes_container > div {
+                border-radius: 16px;
+                background-color: rgb(227, 227, 227);
+                color: rgb(0, 0, 0);
+                margin: 0px 0px 10px 0px;
+                padding: 10px;
+            }
+            .curriculo .curriculo_detalhes .curriculo_detalhes_container h2 {
+                margin-bottom: 10px;
+            }
+            .curriculo .curriculo_detalhes .curriculo_detalhes_container h3 {
+                font-style: italic;
+            }
+            .curriculo .curriculo_detalhes .curriculo_detalhes_container h4 {
+                font-style: italic;
+            }
+            .curriculo .curriculo_detalhes .curriculo_detalhes_container ul {
+                margin-top: 10px;
+            }
+            .curriculo .curriculo_detalhes .curriculo_detalhes_container li {
+                margin-bottom: 15px;
+                font-weight: 200;
+            }
+            .curriculo .curriculo_detalhes .curriculo_detalhes_container b {
+                font-weight: 800;
+            }
+            .curriculo .curriculo_detalhes .curriculo_detalhes_container p {
+                margin-bottom: 10px;
+            }
+    </style>
+</head>
+<body>
+    
+    <div class="curriculo">
+        <div class="curriculo_contato">
+            <div class="curriculo_foto">
+                <img src="./assets/images/fotos/foto_pessoal_v2.png" alt="Foto de Desenvovledor Fullstack" width="1836" height="1836" />
+            </div>
+            <div class="curriculo_vaga_nome">
+                <h1>DESENVOLVEDOR FULLSTACK</h1>
+                <h2>Rafael Ramos da Silva</h2>
+            </div>
+            <div class="curriculo_contatos">
+                <ul>
+                    <li>
+                        <div>
+                            <b><i class="fa-solid fa-calendar"></i> Nascimento:</b> 
+                            <span>13/07/2002</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <b><i class="fa-solid fa-location-dot"></i> Localização:</b> 
+                            <span>São Paulo/SP <br> (*Apto a mudar de localidade)</span>
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="mailto:rafael6ramos@gmail.com" target="_blank">
+                            <div>
+                                <b> <i class="fa-solid fa-envelope"></i> E-mail:</b> 
+                                <span>rafael6ramos@gmail.com</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://api.whatsapp.com/send?phone=5511950503563&text=Olá, vi seu currículo pelo site e fiquei interessado." target="_blank">
+                            <div>
+                                <b><i class="fa-brands fa-whatsapp"></i> Celular/Whatsapp:</b> 
+                                <span>+55 (11) 95050-3563</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="https://www.linkedin.com/in/rafael-ramos-3a330019b/" target="_blank">
+                            <div>
+                                <b><i class="fa-brands fa-linkedin-in"></i> LinkedIn:</b> 
+                                <span>https://www.linkedin.com/in/rafael-ramos-3a330019b/</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/rafaelram0s" target="_blank">
+                            <div>
+                                <b><i class="fa-brands fa-github"></i> Github:</b> 
+                                <span>https://github.com/rafaelram0s</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="padding: 0px 20px 20px 20px;">
+            <div class="curriculo_detalhes">
+                <div class="curriculo_detalhes_container">
+                    
+                    <div class="curriculo_sobre_mim">
+                        <h2><i class="fa-solid fa-user"></i> Sobre Mim</h2>
+
+                        <p>Sou um desenvolvedor fullstack apaixonado por tecnologia e pela entrega de soluções completas. Tenho perfil organizado, autodidata e comprometido com prazos, prezando sempre pela lógica, clareza e performance dos sistemas que desenvolvo.</p>
+
+                        <p>Valorizo ambientes colaborativos, com boa comunicação, transparência e com foco no crescimento pessoal e profissional da equipe. Estou em constante evolução buscando cada vez mais conhecimentos nas tecnologias e na gestão de pessoas e projetos.</p>
+                    </div>
+
+                    <div class="curriculo_habilidades">
+                        <h2><i class="fa-solid fa-graduation-cap"></i> Habilidades Técnicas</h2>
+
+                        <ul>
+                            <li>
+                                <b>Back-end:</b> PHP, Laravel, NodeJS, possuindo uma boa lógica de programação para adaptar para outras linguagens
+                            </li>
+                            <li>
+                                <b>Front-end:</b> HTML, CSS, JavaScript
+                            </li>
+                            <li>
+                                <b>Banco de Dados:</b> MySQL, PostgreSQL, MongoDB
+                            </li>
+                            <li>
+                                <b>DevOps & Ferramentas:</b> Git, GitHub, Postman, FileZilla
+                            </li>
+                            <li>
+                                <b>Outros Conhecimentos:</b> Google Recaptcha, Google Analytics, Google Tag Manager
+                            </li>
+                            <li>
+                                <b>Metodologias Ágeis:</b> Scrum, Kanban
+                            </li>
+                            <li>
+                                <b>Em desenvolvimento/aprendizado:</b> Docker, Kubernetes, GitHub Actions, AWS, Cloudflare, Kafka, Elastic, Redis
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="curriculo_projetos">
+                        <h2><i class="fa-solid fa-square-check"></i> Projetos Realizados</h2>
+
+                        <p>Com <b>+ de 7 sites em produção</b>, comprovando minhas habilidades e técnicas, dentre eles:</p>
+
+                        <ul>
+                            <li>
+                                <a href="https://www.lojadocardoso.com.br/" title="Vitrine de marketplace" target="_blank">
+                                    Loja do Cardoso - Vitrine de marketplaces
+                                    <br> <span>https://www.lojadocardoso.com.br/</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://card.cardway.com.br/" title="Venda de produto e serviços" target="_blank">
+                                    Card - Venda de produto e serviços
+                                    <br> <span>https://card.cardway.com.br/</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://cardhub.cardway.com.br/" title="Documentação de API" target="_blank">
+                                    Cardhub - Documentação de API
+                                    <br> <span>https://cardhub.cardway.com.br/</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.cardway.com.br/" title="Site Institucional" target="_blank">
+                                    Cardway - Site Institucional
+                                    <br> <span>https://www.cardway.com.br/</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.redipe.com.br/" title="Site Institucional" target="_blank">
+                                    Redipe - Site Institucional
+                                    <br> <span>https://www.redipe.com.br/</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://cardmais.cardway.com.br/" title="Landing page" target="_blank">
+                                    Cardmais - Landing page
+                                    <br> <span>https://cardmais.cardway.com.br/</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://cardmidia.cardway.com.br/" title="Landing page" target="_blank">
+                                    Cardmidia - Landing page
+                                    <br> <span>https://cardmidia.cardway.com.br/</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="curriculo_detalhes_container">
+                    <div class="curriculo_experiencia">
+                        <h2><i class="fa-solid fa-user-tie"></i> Experiência Profissional</h2>
+
+                        <div>
+                            <h3>Desenvolvedor Fullstack</h3>
+                            <h4>(Startup de Tecnologia - Buscoterapia)</h4>
+                            <h4>(Empresa de Grande Porte - Cardway)</h4>
+
+                            <ul>
+                                <li>- Liderando projetos e demandas com o modelo <b>Kanban</b> em plataformas como o Trello</li>
+                                <li>- Planejamento com <b>Scrum</b> viabilizando datas de entregas</li>
+                                <li>- Criando o visual com <b>HTML, CSS e Javascript</b>. Podendo adaptar templates ou frameworks conforme o necessário para agilidade, se preocupando sempre com a responsividade.</li>
+                                <li>- Utilizando o padrão MVC para boa organização do código</li>
+                                <li>- Desenvolvendo <b>APIs RestFull</b> e testes com o <b>Postman</b>, seja para processos internos ou consumindo APIs externas</li>
+                                <li>- Tratamento de Routes e utilização de Middlewares controlando as Sessões e fazendo validações internas</li>
+                                <li>- Estruturação e conexão com bancos de dados, mexendo principalmente com o <b>MySQL</b>, realizando o processo CRUD na aplicação, atuando também com Viewers e Triggers, além de implementar na aplicação os conceitos de ORM junto de Migrations e Seeders para populção do banco.</li>
+                                <li>- Uso de Cache para performance do sistema</li>
+                                <li>- Configurando a conexão com os serviços de e-mails e automatizando seus disparos de mensagens</li>
+                                <li>- Criação e tratamento de formulários, fazendo validações personalizadas para cada campo, uso de tokens CSRF e uso de <b>ReCaptcha</b> garantinfo a segurança contra bots e solicitações maliciosas.</li>
+                                <li>- Aplicação de boas práticas de SEO para engajamento do site nos mecanismos de busca</li>
+                                <li>- Uso de <b>Git e Github</b> para trabalho em equipe e versionamento de código</li>
+                                <li>- Gerenciando servidores, adaptando o código para ambientes de homologação e produção conforme o necessário.</li>
+                            </ul>
+
+                            <p>Garantindo sempre a segurança, performance, organização, escalabilidade e visual para uma boa entrega</p>
+
+                            <p>Além de diversas outras técnicas desenvolvidas ao longo da carreira e experiências paralelas que foram adquiridas.</p>
+                        </div>
+                    </div>
+                    <div class="curriculo_salario">
+                        <h2>
+                            <i class="fa-solid fa-language"></i> Idiomas
+                        </h2>
+                        <ul>
+                            <li style="margin: 0px;">Português - Fluente</li>
+                            <li>Inglês - Intermediário</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+

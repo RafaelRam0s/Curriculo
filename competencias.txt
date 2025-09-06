@@ -1,0 +1,38 @@
+
+
+Linguagens conhecidas:
+    Front-end:
+        HTML, CSS, Javascript
+        Bootstrap, Tailwind, Ajax, Jquery
+    Back-end:
+        PHP, Angular, Python, Java, C, C# com ASP .NET MVC, NodeJS,
+    Frameworks de desenvolvimento:
+        Angular, Vue.JS, Wordpress
+    Mobile:
+        Flutter, React Native
+    Banco de dados relacionais e não relacionais:
+        MySQL, SQL Server, MongoDB, PostegreSQL 
+    Serviços Cloud:
+        AWS, Azure
+    Análise de dados:
+        Doctor WareHouse
+        Data Lake
+
+Estruturações de código estudadas:
+    MVC, API RESTFull, CRUD, Orientação a Objetos
+
+Familiaridade com controle de versão GIT
+
+Conhecimento em metodologias ágeis:
+    Scrum, Kanban
+
+Gestão de tarefas:
+    Trello
+
+Experiência com testes: 
+    unitários e TDD.
+    Fazer testes automatizados (unit, integration e E2E testing);
+
+Geração de documentação:
+    
+GitFlow

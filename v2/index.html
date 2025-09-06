@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<!-- 
+========== HELLO WORLD! ==============
+
+Se você está lendo isso é porque posso supor que seja outro programador.
+
+Sobre este site: Fiz ele voltado para o público geral de contratantes, seja donos de empresas ou RH, então tem muito sobre as minhas competências visuais do que de fato técnicas.
+
+Meu Github sei que não está tão atrativo e eventualmente farei ajustes nele e disponibilizarei mais projetos, mas acredite, tudo o que eu mostro e faço nesse site de fato foi desenvolvido somente por mim mesmo, caso queira entrar em contato neste site você poderá encontrar os caminhos de comunicações para tal, aguardo ansiosamente mais oportunidades.
+
+Caso seja um programador vasculhando este site atrás de inspirações fique a vontade para estudar mais este código, só peço para que "Copie, mas não faz igual", acredito que cada sistema tem que ser único para ficar bem atrativo e se ficar muito visualmente parecido todo mundo se queima e caso venha a ver mais boas práticas ou melhorias, por favor me informe para que juntos sejamos mais.
+
+Valeu, falou e fique longe do eXtreme Go Horse!
+-->
+<html lang="pt-br">
+<head>
+    <!-- Meta dados -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Dados para os motores de busca -->
+    <meta name="author" content="Rafael Ramos da Silva" />
+    <meta name="description" content="Crie e melhore seus sistemas empresariais, seja mais tecnológico e alcance novos patamares, tenha segurança, eficiência, escalabilidade e atratividade. Contrate já -> Rafael Ramos da Silva" />
+    <meta name="keywords" content="desenvolvedor, fullstack, profissional, candidato, contratar, web, php, laravel, javascript, nodejs, programador, líder de projeto, vagas, tecnologia, tecnológico, sistemas, moderno, futuristico" />
+    <!-- Aba do navegador -->
+    <link rel="icon" href="./assets/images/icons/icon.ico" type="image/x-icon" />
+    <title>Desenvolva Sistemas -> Contrate: Rafael Ramos da Silva</title>
+    <!-- Melhora a UX no mobile e cria integração com a cor da barra do navegador -->
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+
+    <!-- SEO para redes sociais (Open Graph / Facebook) -->
+    <meta property="og:title" content="Evolua com sistemas personalizados | Desenvolvedor de Sistemas -> Rafael Ramos da Silva" />
+    <meta property="og:description" content="Crie e melhore seus sistemas empresariais, seja mais tecnológico e alcance novos patamares, tenha segurança, eficiência, escalabilidade e atratividade. Contrate já -> Rafael Ramos da Silva" />
+    <meta property="og:image" content="https://rafaelram0s.github.io/Curriculo/assets/images/icons/icon.ico" />
+    <meta property="og:url" content="https://rafaelram0s.github.io/Curriculo/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Evolua com sistemas personalizados | Desenvolvedor de Sistemas -> Rafael Ramos da Silva" />
+    <meta name="twitter:description" content="Crie e melhore seus sistemas empresariais, seja mais tecnológico e alcance novos patamares, tenha segurança, eficiência, escalabilidade e atratividade. Contrate já -> Rafael Ramos da Silva" />
+    <meta name="twitter:image" content="https://rafaelram0s.github.io/Curriculo/assets/images/icons/icon.ico" />
+    <!-- <meta name="twitter:creator" content="@usuario_do_twiter" /> -->
+
+    <!-- Canonical URL (evita conteúdo duplicado) -->
+    <link rel="canonical" href="https://rafaelram0s.github.io/Curriculo/" />
+
+    <!-- Pré-carregamento e performance de fontes de texto -->
+    <!-- Adicionar o atributo crossorigin em produção, EXEMPLO crossorigin="anonymous" -->
+    <link rel="preload" href="./assets/text_fonts/noto_sans_mono/static/NotoSansMono/NotoSansMono-Regular.ttf" as="font" type="font/ttf"/>
+    <link rel="preload" href="./assets/text_fonts/noto_sans_mono/static/NotoSansMono_ExtraCondensed/NotoSansMono_ExtraCondensed-SemiBold.ttf" as="font" type="font/ttf"/>
+
+    <link rel="preload" href="./assets/text_fonts/configuration_font_style-noto_sans_mono.css" as="style" type="text/css" />
+    <link rel="preload" href="./assets/css/colors.css" as="style" type="text/css" />
+    <link rel="preload" href="./assets/css/main_layout.css" as="style" type="text/css" />
+
+
+    <!-- Font Awesome - Biblioteca de ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+
+    <!-- CSS -->
+
+        <link rel="stylesheet" href="./assets/text_fonts/configuration_font_style-noto_sans_mono.css" media="all" /> 
+        <link rel="stylesheet" href="./assets/css/colors.css" media="all" />
+        <link rel="stylesheet" href="./assets/css/main_layout.css" media="all" />
+
+    <!-- END CSS -->
+
+    <!-- Google Analytics -->
+    <!-- Google Tag Manager -->
+
+    <!-- JS -->
+    <!-- END JS -->
+
+</head>
+<body>
+    
+    <!-- ReCaptcha v3 -->
+    <!-- <script src="https://www.google.com/recaptcha/api.js?render=<?php echo(GRECAPTCHA_PUBLIC_KEY); ?>"></script> -->
+
+    <!-- <div id="layout_preloader"></div> -->
+
+    <style>
+        #layout_pagina {
+            position: relative;
+            z-index: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            align-items: normal;
+            align-content: stretch;
+            justify-content: space-between;
+        }
+        #layout_cabecalho {
+            background-color: rgba(50, 50, 50, 0.2);
+            backdrop-filter: blur(25px);
+            color: var(--cor_texto);
+            position: sticky;
+            z-index: 10;
+            top: 0px;
+            left: 0px;
+        }
+        [data-theme="dark"] #layout_cabecalho {
+            background-color: rgba(200, 200, 200, 0.2);
+        }
+        #layout_conteudo {
+            flex-grow: 1;
+        }
+        #layout_rodape {
+            background-color: var(--cor_primaria);
+            color: var(--cor_fundo);
+        }
+    </style>
+    <div id="layout_pagina">
+        <div id="layout_pre_cabecalho"></div>
+        <header id="layout_cabecalho">
+            <div class="layout_cabecalho_container layout_espacamento">
+                <div>
+                    <a href="./index.html" class="logo_desenvolvedor_extensa">
+                        <div class="logo_desenvolvedor_extensa_1">
+                            <span class="logo_desenvolvedor_extensa_1_1">
+                                <span>&lt;</span>
+                                <span class="logo_desenvolvedor_extensa_1_1_2">/</span>
+                                <span class="logo_desenvolvedor_extensa_1_1_3">&gt;</span>
+                            </span>
+                        </div>
+                        <div class="logo_desenvolvedor_extensa_2"></div>
+                        <div class="logo_desenvolvedor_extensa_3">
+                            <span class="logo_desenvolvedor_extensa_3_1">Desenvolvido por:</span> <br>
+                            <span class="logo_desenvolvedor_extensa_3_2">Rafael Ramos da Silva</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="layout_cabecalho_navegacao">
+                    <nav>
+                        <a href="#sobre_mim">Sobre mim</a>
+                        <a href="#experiencias">Experiências</a>
+                        <a href="">Currículo</a>
+                        <a href="#formas_de_contato">Contato</a>
+                    </nav>
+                </div>
+                <div>
+                    <button type="button" id="toggle-theme">Mudar tema</button>
+                    <script>
+                        const toggleButton = document.getElementById('toggle-theme');
+
+                        toggleButton.addEventListener('click', () => {
+                            const currentTheme = document.documentElement.getAttribute('data-theme');
+                            
+                            if (currentTheme === 'dark') {
+                                document.documentElement.removeAttribute('data-theme');
+                                localStorage.setItem('theme', 'light');
+                            } else {
+                                document.documentElement.setAttribute('data-theme', 'dark');
+                                localStorage.setItem('theme', 'dark');
+                            }
+                        });
+
+                        // Carregar o tema salvo no localStorage ao abrir o site
+                        window.addEventListener('DOMContentLoaded', () => {
+                            const savedTheme = localStorage.getItem('theme');
+                            if (savedTheme === 'dark') {
+                                document.documentElement.setAttribute('data-theme', 'dark');
+                            }
+                        });
+                    </script>
+                    <!-- [Mudar idioma]
+                        <div>
+                            <button type="button">Mudar idioma</button>
+                            <div>
+                                <ul>
+                                    <li>
+                                        <span>[Bandeira do Brasil]</span>
+                                        <span>PT-BR</span>
+                                    </li>
+                                    <li>
+                                        <span>[Bandeira do EUA]</span>
+                                        <span>EN</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div> 
+                    -->
+                </div>
+                <div class="layout_cabecalho_btn_menu">
+                    <button type="button">Abrir Menu</button>
+                </div>
+            </div>
+        </header>
+        <main id="layout_conteudo">
+            <div>
+                <section class="layout_espacamento display_none">
+                    <h1>Desenvolvedor - Rafael Ramos da Silva</h1>
+                    <p>Teste</p>
+
+                    <h2>Teste</h2>
+
+                    <div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, provident? Odit nobis nemo dicta optio alias quaerat, aperiam labore libero reiciendis praesentium repellat distinctio ipsa, consectetur amet quis nisi animi!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, provident? Odit nobis nemo dicta optio alias quaerat, aperiam labore libero reiciendis praesentium repellat distinctio ipsa, consectetur amet quis nisi animi!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, provident? Odit nobis nemo dicta optio alias quaerat, aperiam labore libero reiciendis praesentium repellat distinctio ipsa, consectetur amet quis nisi animi!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, provident? Odit nobis nemo dicta optio alias quaerat, aperiam labore libero reiciendis praesentium repellat distinctio ipsa, consectetur amet quis nisi animi!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, provident? Odit nobis nemo dicta optio alias quaerat, aperiam labore libero reiciendis praesentium repellat distinctio ipsa, consectetur amet quis nisi animi!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, provident? Odit nobis nemo dicta optio alias quaerat, aperiam labore libero reiciendis praesentium repellat distinctio ipsa, consectetur amet quis nisi animi!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, provident? Odit nobis nemo dicta optio alias quaerat, aperiam labore libero reiciendis praesentium repellat distinctio ipsa, consectetur amet quis nisi animi!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, provident? Odit nobis nemo dicta optio alias quaerat, aperiam labore libero reiciendis praesentium repellat distinctio ipsa, consectetur amet quis nisi animi!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, provident? Odit nobis nemo dicta optio alias quaerat, aperiam labore libero reiciendis praesentium repellat distinctio ipsa, consectetur amet quis nisi animi!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, provident? Odit nobis nemo dicta optio alias quaerat, aperiam labore libero reiciendis praesentium repellat distinctio ipsa, consectetur amet quis nisi animi!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, provident? Odit nobis nemo dicta optio alias quaerat, aperiam labore libero reiciendis praesentium repellat distinctio ipsa, consectetur amet quis nisi animi!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, provident? Odit nobis nemo dicta optio alias quaerat, aperiam labore libero reiciendis praesentium repellat distinctio ipsa, consectetur amet quis nisi animi!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, provident? Odit nobis nemo dicta optio alias quaerat, aperiam labore libero reiciendis praesentium repellat distinctio ipsa, consectetur amet quis nisi animi!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, provident? Odit nobis nemo dicta optio alias quaerat, aperiam labore libero reiciendis praesentium repellat distinctio ipsa, consectetur amet quis nisi animi!</p>
+                    </div>
+                </section>
+
+                <style>
+                    .curriculo {
+                        padding: 10px;
+                    }
+                    .curriculo h1 {
+                        font-size: 2.5em;
+                        text-align: center;
+                    }
+                    .curriculo h2, .curriculo h3 {
+                        color: #004f9c;
+                        text-align: center;
+                    }
+                </style>
+                <section class="curriculo">
+                    
+                    <h1>DESENVOLVEDOR FULLSTACK</h1>
+
+                    <h2>Rafael Ramos da Silva</h2>
+
+                    <div>
+                        <p>
+                            <b>Nascimento:</b>
+                            <span>13/07/2002</span>
+                        </p>
+    
+                        <p>
+                            <b>Localização:</b> 
+                            <span>São Paulo/SP (*Apto a mudar de localidade)</span>
+                        </p>
+                    </div>
+
+                    <div>
+                        <div>
+                            <h3>Formas de Contato:</h3>
+                            
+                            <a href="mailto:rafael6ramos@gmail.com" target="_blank">
+                                <b>E-mail:</b> 
+                                <span>rafael6ramos@gmail.com</span>
+                            </a>
+
+                            <a href="https://api.whatsapp.com/send?phone=5511950503563&text=Olá, vi seu currículo pelo site e fiquei interessado." target="_blank">
+                                <b>Celular/Whatsapp:</b> 
+                                <span>(11) 95050-3563</span>
+                            </a>
+                        </div>
+
+                        <div>
+                            <h3>Redes Sociais</h3>
+
+                            <a href="https://www.linkedin.com/in/rafael-ramos-3a330019b/" target="_blank">
+                                <b>🔗 LinkedIn:</b>
+                                <span>https://www.linkedin.com/in/rafael-ramos-3a330019b/</span>
+                            </a>
+                            
+                            <a href="https://github.com/rafaelram0s" target="_blank">
+                                <b>🔗 GitHub:</b>
+                                <span>https://github.com/rafaelram0s</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+
+                    <div>
+                        <h3>🛠️ Habilidades Técnicas</h3>
+
+                        <ul>
+                            <li><b>Back-end:</b> PHP (especialista), Laravel, NodeJS</li>
+                            <li><b>Front-end:</b> HTML, CSS, JavaScript</li>
+                            <li><b>Banco de Dados:</b> MySQL, PostgreSQL, MongoDB</li>
+                            <li><b>DevOps & Ferramentas:</b> Git, GitHub, Postman, FileZilla</li>
+                            <li><b>Outros Conhecimentos:</b> Google Recaptcha, Google Analytics, Google Tag Manager</li>
+                            <li><b>Metodologias Ágeis:</b> Scrum, Kanban</li>
+    
+                            <li><b>Em desenvolvimento/aprendizado:</b> Docker, Kubernetes, GitHub Actions, AWS, Cloudflare, Kafka, Elastic, Redis</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3>🎯 Objetivo Profissional</h3>
+                        <p>Desenvolvedor Fullstack com experiência em desenvolvimento web e aplicações robustas, atuando em todas as etapas do ciclo de vida do software — desde levantamento de requisitos até a entrega final, priorizando segurança, performance, escalabilidade e organização.</p>
+                    </div>
+
+                    <div>
+                        <h3>💼 Experiência Profissional</h3>
+
+                        <div>
+                            <h4>Desenvolvedor Fullstack</h4>
+                            <h5>(Startup de Tecnologia & Empresa de Grande Porte — detalhar se quiser colocar nomes)</h5>
+
+                            <ul>
+                                <li>- Planejamento com Scrum viabilizando datas de entregas</li>
+                                <li>- Organizando as demandas com o modelo Kanban em plataformas como o Trello</li>
+                                <li>- Criando o visual com HTML, CSS e Javascript. Podendo adaptar templates ou frameworks conforme o necessário para agilidade, se preocupando sempre com a responsividade.</li>
+                                <li>- Utilizando o padrão MVC para boa organização do código</li>
+                                <li>- Fazendo APIs RestFull e testes com o Postman, seja para processos internos ou consumindo APIs externas</li>
+                                <li>- Tratamento de Routes e utilização de Middlewares controlando as Sessões e fazendo validações internas</li>
+                                <li>- Estruturação e conexão com bancos de dados, mexendo principalmente com o MySQL, realizando o processo CRUD na aplicação, atuando também com Viewers e Triggers, além de implementar na aplicação os conceitos de ORM junto de Migrations e Seeders para populção do banco.</li>
+                                <li>- Uso de Cache para performance do sistema</li>
+                                <li>- Configurando e-mails e seus disparos de mensagens</li>
+                                <li>- Criação e tratamento de formulários, fazendo validações personalizadas para cada campo, uso de tokens CSRF e uso de ReCaptcha evitando bots ou solicitações maliciosas.</li>
+                                <li>- Conhecimentos e aplicação de boas práticas de SEO para engajamento do site nos mecanismos de busca</li>
+                                <li>- Uso de Git e Github para trabalho em equipe e versionamento de código</li>
+                                <li>- Responsabilidade com servidores adaptando o código para ambientes de homologação e produção conforme o necessário.</li>
+                                <li>- Preocupando-se sempre com a segurança, performance, organização, escalabilidade e visual para uma boa entrega</li>
+
+                                <li>Além de diversas outras técnicas desenvolvidas ao longo da carreira e experiências paralelas que foram adquiridas.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h3>👤 Sobre Mim</h3>
+
+                        <p>Sou um desenvolvedor fullstack apaixonado por tecnologia e pela entrega de soluções completas. Tenho perfil organizado, autodidata e comprometido com prazos, prezando sempre pela lógica, clareza e performance dos sistemas que desenvolvo. Valorizo ambientes colaborativos, com boa comunicação e foco no crescimento pessoal e profissional da equipe.</p>
+                    </div>
+                    
+                    <div>
+                        <h3>👨‍💻 Projetos desenvolvidos:</h3>
+
+                        <p><b>+ de 7</b> sites em produção, entre eles:</p>
+                    </div>
+
+                    
+
+                    
+
+                    
+                    
+
+                    
+                    
+                    https://www.lojadocardoso.com.br/ (Vitrine de marketplace)
+                    http://card.cardway.com.br/ (Venda do produto)
+                    https://www.cardway.com.br/ (Institucional)
+                    https://www.redipe.com.br/ (Institucional)
+                    https://cardhub.cardway.com.br/ (Documentação de uma API)
+                    https://cardmais.cardway.com.br/ (Landing page)
+                    https://cardmidia.cardway.com.br/ (Landing page)
+
+                    🌍 Idiomas
+                    Português — Fluente
+                    Inglês — Intermediário
+
+                    💰 Pretensão Salarial (Negociável de acordo com benefícios e propostas)
+                    CLT: a partir de R$ 5.000,00
+                    PJ: a partir de R$ 7.000,00
+
+                </section>
+            </div>
+        </main>
+        <footer id="layout_rodape">
+            <div class="layout_espacamento">
+                <div>
+                    <address>
+                        <p>Criado por: Rafael Ramos da Silva</p>
+                        <p>
+                            <i class="fa-brands fa-github"></i> 
+                            Github: <a href="https://github.com/RafaelRam0s" target="_blank" rel="nofollow">RafaelRam0s</a>
+                        </p>
+                        <p>
+                            <i class="fa-brands fa-instagram"></i>
+                            Instragram: <a href="https://www.instagram.com/rafael6ramos/" target="_blank" rel="nofollow">rafael6ramos</a>
+                        </p>
+                        <p>
+                            <i class="fa-brands fa-linkedin-in"></i>
+                            Linkedin: <a href="https://www.linkedin.com/in/rafael-ramos-3a330019b/" target="_blank" rel="nofollow">Rafael Ramos</a>
+                        </p>
+                        <p>
+                            <i class="fa-solid fa-envelope"></i>
+                            E-mail: <a href="mailto:rafael6ramos@gmail.com" target="_blank" rel="nofollow">rafael6ramos@gmail.com</a>
+                        </p>
+                        <p>
+                            <i class="fas fa-mobile-alt"></i>
+                            Celular de contato: <a href="tel:+5511950503563">+55 (11) 9-5050-3563</a>
+                        </p>
+                    </address>
+                </div>
+                <div>Copyright</div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- <div id="layout_modal">
+        <div class="layout_modal_fundo"></div>
+        <div class="layout_modal_card">
+            <div class="layout_modal_card_cabecalho">
+                <div>
+                    <h2>Modal Título</h2>
+                </div>
+                <button type="button" class="layout_modal_card_cabecalho_fechar">X</button>
+            </div>
+            <div class="layout_modal_card_conteudo">
+                <h2>Modal Conteúdo</h2>
+                
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. A culpa, minima distinctio deserunt fuga reprehenderit, ipsa laboriosam laudantium cupiditate, tempora dolorum quo harum fugit natus et. Tempore eos in excepturi?</p>
+            </div>
+            <div class="layout_modal_card_conteudo_rodape"></div>
+        </div>
+    </div> -->
+
+
+    <!-- JS -->
+    <!-- END JS -->
+</body>
+</html>
